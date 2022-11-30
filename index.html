@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function matrix(array) {
+            var table = [];
+            for (var rowIndex = 0; rowIndex < array.length; rowIndex++) {
+                var row = [];
+                var rowData = array.at(rowIndex);
+                for (var cellIndex = 0; cellIndex < array.length; cellIndex++) {
+                    var cellData = rowData * array.at(cellIndex);
+                    row.push(cellData);
+                }
+                table.push(row);
+            }
+            return table;
+        }
+        console.log(matrix([1,2,3,4,5,6,7,8,9]));
+    </script>
+</body>
+</html>
